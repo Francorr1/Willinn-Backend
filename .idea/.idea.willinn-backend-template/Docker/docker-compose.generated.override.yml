@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.8"
+services:
+  api:
+    build:
+      context: "C:\\Users\\6203\\Desktop\\Willinn test"
+      dockerfile: "Api/Dockerfile"
+      target: "build"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Api.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+    image: "api:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\6203\\AppData\\Roaming\\Microsoft\\UserSecrets:/root/.microsoft/usersecrets"
+    - "C:\\Users\\6203\\.nuget\\packages:/root/.nuget/packages"
+    - "C:\\Users\\6203\\Desktop\\Willinn test\\Api:/app:rw"
+    - "C:\\Users\\6203\\Desktop\\Willinn test:/src:rw"
+    working_dir: "/app"
